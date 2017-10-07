@@ -1,12 +1,12 @@
 <html>
 <head>
 <title>
-Login Page
+Login Form
 </title>
 <script> 
 function go() 
 { 
-	window.location="dashboard.php"; 
+    window.location="dashboard.php"; 
 } 
 </script>
 <style>
@@ -31,10 +31,52 @@ body {
 </head>
 <body>
 <?php
+$servername = "localhost";
+$username = "root";
+$password = NULL;
+$dbname = "loc";
+//Creating connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+/*
+//Creating Database
+$sql = "CREATE DATABASE loc";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+//Creating Table
+$sql = "CREATE TABLE storage (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+name VARCHAR(30) NOT NULL,
+email VARCHAR(50),
+reg_date TIMESTAMP
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Table storage created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+//Entering data
+$sql = "INSERT INTO storage (name, email)
+VALUES ('name', 'email')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New data stored successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+*/
+$conn->close();
 ?>
 <center>
 <font face = "cursive" size = "10" color = "Red" > 
-LOGIN PAGE 
+&nbsp;&nbsp;&nbsp;&nbsp;
+LOGIN FORM 
 </font>
 </center>
 <br>
@@ -42,7 +84,7 @@ LOGIN PAGE
 <form action = "dashboard.php" method = "post" align = "middle">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Name: 
-<input type = "text" name = "fname">
+<input type = "text" name = "name">
 <br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,8 +92,9 @@ Email:
 <input type = "text" name = "email">
 <br>
 <br>
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type = "reset" name = "reset" value = "Reset">
 <input type = "submit" name = "submit" value = "Submit" onclick = "go()">
 </form>

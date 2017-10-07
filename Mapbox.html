@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
 <title>
   Marauder's Map
 </title>  
@@ -19,6 +21,16 @@
   </font></center></h1>                                 
     <div id="map">
     </div>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidWdtYW4iLCJhIjoiY2o4Z3h1b2U4MGg4cDJxbjZjNnZhanZ2MCJ9.as1TguZHabD-bUuxD1mI3g';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v10'
+});
+</script>
+    
       <script>
       var map, infoWindow;
       function initMap() 
@@ -38,7 +50,7 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('name');
+            infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
             }, 
