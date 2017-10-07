@@ -23,6 +23,17 @@
       var map, infoWindow;
       function initMap() 
         {
+          var loc1 = {lat: 12.991824, lng: 80.230296};
+          var loc2 = {lat: 12.991771, lng: 80.230291};
+          var loc3 = {lat: 12.991322, lng: 80.230157};
+          var loc4 = {lat: 12.991625, lng: 80.230425};
+          var loc5 = {lat: 12.991343, lng: 80.230414};
+          var loc6 = {lat: 12.991628, lng: 80.230570};
+          var loc7 = {lat: 12.991421, lng: 80.230715};
+          var loc8 = {lat: 12.991646, lng: 80.230800};
+          var loc9 = {lat: 12.991317, lng: 80.231015};
+          var loc10 = {lat: 12.991986, lng: 80.230806};
+          var loc11 = {lat: 12.991923, lng: 80.230575};
           map = new google.maps.Map(document.getElementById('map'), 
         {
           center: {lat: 12.9918, lng: 80.2309},
@@ -38,7 +49,7 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('name');
+            infoWindow.setContent('Your Location');
             infoWindow.open(map);
             map.setCenter(pos);
             }, 
@@ -49,6 +60,50 @@
         else {
             handleLocationError(false, infoWindow, map.getCenter());
         }
+          var marker = new google.maps.Marker({
+          position: loc1,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc2,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc3,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc4,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc5,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc6,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc7,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc8,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc9,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc10,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: loc11,
+          map: map
+        });
         }
           function handleLocationError(browserHasGeolocation, infoWindow, pos) {
            infoWindow.setPosition(pos);
