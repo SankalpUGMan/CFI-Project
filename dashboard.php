@@ -14,7 +14,7 @@ Your Email Address is <?php echo $_POST['email'];?>
 <br>
 </center>
 <script>
-    window.location="https://sankalpugman.github.io/CFI-Project/map.html"; 
+    window.location="https://cdn.rawgit.com/SankalpUGMan/CFI-Project/master/Project%20Map%203.html"; 
 </script>
 </body>
 </html>
