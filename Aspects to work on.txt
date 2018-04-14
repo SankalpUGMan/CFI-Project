@@ -1,7 +1,7 @@
-1) Setup a Map = DONE
-2) Make sure to get your current location at any place you go by clicking a button = 
-3) Make sure to have smooth location transitions = 
-4) Enable animations = 
-5) Gather a large amount of data in your database and apply the same smoothened current locs and animations to all = 
-6) Make the page look awesome = 
-7) Convert it to app = 
+1) Setup a Map,
+2) Make sure to get your current location at any place you go by clicking a button,
+3) Make sure to have smooth location transitions,
+4) Enable animations,
+5) Gather a large amount of data in your database and apply the same smoothened current locs and animations to all,
+6) Make the page look awesome,
+7) Convert it to app.
